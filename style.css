@@ -3,6 +3,13 @@
     margin: 0;
     padding: 0;
     color: white;
+    font-family: "Roboto", system-ui;
+}
+
+:root{
+    --small-text: 12px;
+    --medium-text: 16px;
+    --big-text: 20px;
 }
 
 body{
@@ -16,16 +23,19 @@ body{
     width: 100%;
     display: flex;
     position: fixed;
-    /* background-color: sandybrown; */
     justify-content: space-between;
 }
 
-.header__logo{
+.header-nav__logo{
     object-fit: contain;
     height: 50px;
     align-self: center;
-    margin-left: 30px;
+    margin: 0 20px;
     margin-top: 5px;
+}
+
+.header-nav{
+    display: flex;
 }
 
 .header-nav__list{
@@ -33,14 +43,85 @@ body{
     width: 80vw;
     list-style: none;
     display: flex;
+    margin-right: 10%;
+}
+
+.header-nav__title{
+    font-size: var(--small-text);
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .header-nav__item{
     display: flex;
     align-items: center;
+    margin-right: 40px;
+    cursor: pointer;
 }
 
 .header-nav__icon{
     height: 30%;
     margin-right: 12px;
 }
+
+.header-perfil{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-perfil__image{
+    height: 50px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+    .header-nav__title{
+        display: none;
+    }
+
+    .header__logo{
+        height: 50%;
+        margin: 0 15px;
+    }
+
+    .header-nav__list{
+        width: 70vw;
+    }
+
+    .header-perfil__title{
+        display: none;
+    }
+}
+
+/*Lista responsive cuando se muy pequeña la pantalla - EN REVISIÓN*/
+/* @media screen and (max-width: 650px){
+    .header-nav__list{
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+    }
+
+    .header-nav__item{
+        margin: 10px 0;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .menu-toggle:hover + .header-nav__list{
+        display: flex;
+    }
+} */
