@@ -15,15 +15,17 @@
 body{
     background: linear-gradient(#000814, #0d1b2a, #000814);
     background-repeat: no-repeat;
-    background-attachment: fixed;   
+    background-attachment: fixed; 
 }
 
 .header{
     height: 65px;
+    /* height: 6.5vh; */
     width: 100%;
     display: flex;
     position: fixed;
     justify-content: space-between;
+    background-color: #000814; /*Solucionar el fixed del */
 }
 
 .header-nav__logo{
@@ -125,3 +127,43 @@ body{
         display: flex;
     }
 } */
+
+.main{
+    width: 100%;
+    display: flex;
+    padding: 80px;
+}
+
+.main-principal{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-princiap-carousel{
+    display: flex;
+    width: 300%;
+    /* animation: slide 10s infinite; */
+}
+
+.main-principal__item{
+    width: 100%;
+    margin-right: 30px;
+}
+
+/*Mover el carrusel*/
+@keyframes slide {
+    0% { transform: translateX(0%); }        /* Imagen 1 */
+    33.33% { transform: translateX(0%); }    /* Mantener Imagen 1 */
+    33.34% { transform: translateX(-100%); } /* Cambio a Imagen 2 */
+    66.66% { transform: translateX(-100%); } /* Mantener Imagen 2 */
+    66.67% { transform: translateX(-100%); } /* Cambio a Imagen 3 */
+    100% { transform: translateX(-100%); }   /* Mantener Imagen 3 */
+}
+
+
+
+
+.footer{
+    background-color: gold;
+}
