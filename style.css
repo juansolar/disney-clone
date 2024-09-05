@@ -131,11 +131,12 @@ body{
 .main{
     width: 100%;
     display: flex;
-    padding: 80px;
+    padding-top: 80px;
 }
 
 .main-principal{
     width: 100%;
+    margin: 20px 0;
     overflow: hidden;
     position: relative;
 }
@@ -143,27 +144,31 @@ body{
 .main-princiap-carousel{
     display: flex;
     width: 300%;
-    /* animation: slide 10s infinite; */
+    animation: slide 20s infinite;
 }
 
 .main-principal__item{
     width: 100%;
-    margin-right: 30px;
+    margin: 0 25px 20px;
+    box-shadow: 1px 2px 15px 1px #0d1b2a;
+}
+
+.main-principal__item:hover{
+    border: 1px solid white;
+    cursor: pointer;
 }
 
 /*Mover el carrusel*/
 @keyframes slide {
-    0% { transform: translateX(0%); }        /* Imagen 1 */
-    33.33% { transform: translateX(0%); }    /* Mantener Imagen 1 */
-    33.34% { transform: translateX(-100%); } /* Cambio a Imagen 2 */
-    66.66% { transform: translateX(-100%); } /* Mantener Imagen 2 */
-    66.67% { transform: translateX(-100%); } /* Cambio a Imagen 3 */
-    100% { transform: translateX(-100%); }   /* Mantener Imagen 3 */
+    0% { transform: translateX(0%); }       
+    33% { transform: translateX(0%); }    
+    34% { transform: translateX(-33.2%); } 
+    66% { transform: translateX(-33.2%); } 
+    67% { transform: translateX(-66.4%); } 
+    99% { transform: translateX(-66.4%); } 
+    100% { transform: translateX(0%); } 
 }
 
-
-
-
-.footer{
-    background-color: gold;
+.main-principal__image{
+    width: 100%;
 }
